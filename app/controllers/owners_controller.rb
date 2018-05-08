@@ -71,6 +71,6 @@ class OwnersController < ApplicationController
     def owner_params
       params.require(:owner).permit(:header, :title, :subtitle, :recipient_name, :first_paragraph,
        :second_paragraph, :first_assignatory_name , :first_assignatory_position, 
-       :second_assignatory_name, :second_assignatory_position, :image)
+       :second_assignatory_name, :second_assignatory_position, :logo)
     end
 end

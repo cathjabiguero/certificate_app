@@ -51,7 +51,7 @@
 </p>
 <p>
 <strong>Logo</strong>
-<%= image_tag @owner.image.thumb('100x100#').url if @owner.image_stored? %>
+<%= image_tag @owner.logo.thumb('100x100#').url if @owner.logo_stored? %>
 </p>
 
 <%= link_to 'Edit', edit_owner_path(@owner) %> |

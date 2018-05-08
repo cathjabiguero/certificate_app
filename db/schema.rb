@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180507104930) do
+ActiveRecord::Schema.define(version: 20180508035023) do
 
   create_table "owners", force: :cascade do |t|
     t.string "header"
@@ -25,8 +25,8 @@ ActiveRecord::Schema.define(version: 20180507104930) do
     t.string "second_assignatory_name"
     t.string "second_assignatory_position"
     t.string "subtitle"
-    t.string "image_uid"
-    t.string "image_name"
+    t.string "logo_uid"
+    t.string "logo_name"
   end
 
 end
