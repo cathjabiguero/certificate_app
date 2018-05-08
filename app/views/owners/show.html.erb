@@ -1,58 +1,19 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Header:</strong>
-  <%= @owner.header %>
-</p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @owner.title %>
-</p>
-
-<p>
-  <strong>Subtitle:</strong>
-  <%= @owner.subtitle %>
-</p>
-
-<p>
-  <strong>Recipient:</strong>
-  <%= @owner.recipient_name %>
-</p>
-
-<p>
-  <strong>First Paragraph:</strong>
-  <%= @owner.first_paragraph %>
-</p>
-
-<p>
-  <strong>Second Paragraph:</strong>
-  <%= @owner.second_paragraph %>
-</p>
-
-<p>
-  <strong>First Assignatory:</strong>
-  <%= @owner.first_assignatory_name %>
-</p>
-
-<p>
-  <strong>Position:</strong>
-  <%= @owner.first_assignatory_position %>
-</p>
-
-<p>
-  <strong>Second Assignatory:</strong>
-  <%= @owner.second_assignatory_name %>
-</p>
-
-<p>
-  <strong>Position:</strong>
-  <%= @owner.second_assignatory_position %>
-</p>
-<p>
-<strong>Logo</strong>
-<%= image_tag @owner.logo.thumb('100x100#').url if @owner.logo_stored? %>
-</p>
-
-<%= link_to 'Edit', edit_owner_path(@owner) %> |
-<%= link_to 'Back', owners_path %>
+<table>
+  <tr>
+    <td>
+      <%= @owner.title %>
+      <hr />
+      <%= @owner.subtitle %>
+      <h1><%= @owner.recipient_name %></h1>
+      <p><%= @owner.first_paragraph %></p>
+      <p><%= @owner.second_paragraph %></p>
+      <hr/>
+      <p><%= @owner.first_assignatory_name %></p>
+      <p><%= @owner.first_assignatory_position %></p>
+    </td>
+    <td>
+    <%= image_tag @owner.logo.thumb('100x100#').url if @owner.logo_stored? %>
+    </td>
+  </tr>
+</table>
