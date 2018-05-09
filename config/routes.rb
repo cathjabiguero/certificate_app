@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
-  resources :owners
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :owners do
+    collection do
+      post "import"
+    end
+  end
 end

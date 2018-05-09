@@ -61,6 +61,11 @@ class OwnersController < ApplicationController
     end
   end
 
+  def import
+    Owner.import(params[:file])
+    redirect_to owners_path, notice: 'Import Added Successfully.'
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_owner
