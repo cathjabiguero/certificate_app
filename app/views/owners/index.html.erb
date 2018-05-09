@@ -1,6 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Owners</h1>
+<h1>Automate Certificate Creation</h1>
+<%= link_to 'For Individuals', new_owner_path %> <br>
+<%= link_to 'For Multiple Records', import_instructions_owners_path %> <br><br>
 <div class="media">
   <div class="media-body">
       <table class="table table-hover">
@@ -33,6 +35,7 @@
               <td><%= owner.first_assignatory_position %></td>
               <td><%= owner.second_assignatory_name %></td>
               <td><%= owner.second_assignatory_position %></td>
+              <td><%= image_tag owner.logo.thumb('100x100#').url if owner.logo_stored?%></td>
               <td><%= link_to 'Show', owner %></td>
               <td><%= link_to 'Edit', edit_owner_path(owner) %></td>
               <td><%= link_to 'Destroy', owner, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -44,10 +47,3 @@
 </div>
 <br>
 
-<h3>Import Schools</h3>
-<%= form_tag import_owners_path, multipart: true do %>
-  <%= file_field_tag :file %>
-  <%= submit_tag "Upload Schools" %>
-<% end %>
-
-<%= link_to 'New Owner', new_owner_path %>
