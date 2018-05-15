@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Import Instructions</h1>
-<h2>"support csv input for creating multiple records"</h2><br>
+<h2>support csv input for creating multiple records</h2><br>
 <div>
   <h3>Before importing CSV file</h3>
   <p>
@@ -25,9 +25,13 @@
   </ul>
   2. All items marked “*” are required that must be completed.<br>
   3. The labels <b>must</b> be CAPITALIZE.
-  <h3> Upload logo </h3>
-  (note that it's' optional to upload logo.)<br>
-
+  <h3> Upload multiple logos </h3>
+  (note that it's' optional to upload logo.)<br><br>
+  <div class="field">
+  <%= form_tag import_owners_path, multipart: true do %>
+  <%= file_field_tag :logo, id: :owner_logo %>
+  <% end %>
+  </div>
   
   <br> 
   <h3>Import CSV file</h3>
