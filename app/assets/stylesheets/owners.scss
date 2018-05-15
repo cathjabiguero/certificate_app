@@ -2,12 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-table {
-    height: 100%;
-    width: 100%;
+table#show {
+    height: 560px;
+    width: 792px;
     padding: 0;
     margin: 0;
     border: 1px solid #000;
+    background-image: image-url('student_cert.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: fixed;
 }
 h1,h3 {
     font-style: italic;
