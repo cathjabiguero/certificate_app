@@ -1,22 +1,28 @@
 <p id="notice"><%= notice %></p>
+
 <table>
-  <tr>
-    <td>
+  <tr><td colspan="2">
       <%= @owner.title %>
       <hr/>
       <%= @owner.subtitle %>
       <h1><%= @owner.recipient_name %></h1>
       <p><%= @owner.first_paragraph %></p>
       <p><%= @owner.second_paragraph %></p>
-      <hr/>
-      <p><%= @owner.first_assignatory_name %></p>
-      <p><%= @owner.first_assignatory_position %></p>
-      <p><%= @owner.second_assignatory_name %></p>
-      <p><%= @owner.second_assignatory_position %></p>
-    </td>
-    <td>
-    <%= image_tag @owner.logo.thumb('100x100#').url if @owner.logo_stored? %>
-    </td>
+      <hr/></td>
+      
+      <td rowspan="2">
+      <%= image_tag @owner.logo.thumb('100x100#').url if @owner.logo_stored? %>
+      </td>
   </tr>
+
+  <tr>
+      <td><p><%= @owner.first_assignatory_name %></p>
+      <p><%= @owner.first_assignatory_position %></p></td>
+
+      <td><p><%= @owner.second_assignatory_name %></p>
+      <p><%= @owner.second_assignatory_position %></p></td>
+  </tr>
+
+
 </table>
 <%= link_to 'Back', owners_path %>

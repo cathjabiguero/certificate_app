@@ -62,7 +62,7 @@ class OwnersController < ApplicationController
   end
 
   def import
-    Owner.import(params[:file])
+    Owner.import(params[:file], params[:logo])
     redirect_to owners_path, notice: 'Import Added Successfully.'
   end
 

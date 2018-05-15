@@ -1,48 +1,44 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Import Instructions</h1>
-<h2>support csv input for creating multiple records</h2><br>
-<div>
-  <h3>Before importing CSV file</h3>
-  <p>
-  1. Your <u>LABELS</u> inside your CSV should be 
-  assembled in the following order:<br>
-  <ul>
-    <b>
-      <li>HEADER</li>
-      <li>TITLE *</li>
-      <li>SUBTITLE *</li>
-      <li>RECIPIENT NAME *</li>
-      <li>FIRST PARAGRAPH *</li>
-      <li>SECOND PARAGRAPH *</li>
-      <li>FIRST ASSIGNATORY NAME *</li>
-      <li>FIRST ASSIGNATORY POSITION *</li>
-      <li>SECOND ASSIGNATORY NAME</li>
-      <li>SECOND ASSIGNATORY POSITION</li>
-      <li>THIRD ASSIGNATORY NAME</li>
-      <li>THIRD ASSIGNATORY POSITION</li>
-    </b>
-  </ul>
-  2. All items marked “*” are required that must be completed.<br>
-  3. The labels <b>must</b> be CAPITALIZE.
-  <h3> Upload multiple logos </h3>
-  (note that it's' optional to upload logo.)<br><br>
-  <div class="field">
-  <%= form_tag import_owners_path, multipart: true do %>
-  <%= file_field_tag :logo, id: :owner_logo %>
-  <% end %>
-  </div>
+<%= form_tag import_owners_path, multipart: true do %>
   
-  <br> 
-  <h3>Import CSV file</h3>
-  1. Click Choose File.<br>
-  2. Locate your CSV file, then click Open.<br>
-  3. Click Upload file.<br><br>
-  <%= form_tag import_owners_path, multipart: true do %>
-    <%= file_field_tag :file %>
-    <%= submit_tag "Upload" %>
-  <% end %>
-  </p>
-
-
-</div>
+  <h1>Import Instructions</h1>
+  <h2>support csv input for creating multiple records</h2><br>
+  <div>
+    <h3>Before importing CSV file</h3>
+    <p>
+    1. Your <u>LABELS</u> inside your CSV should be 
+    assembled in the following order:<br>
+    <ul>
+      <b>
+        <li>HEADER</li>
+        <li>TITLE *</li>
+        <li>SUBTITLE *</li>
+        <li>RECIPIENT NAME *</li>
+        <li>FIRST PARAGRAPH *</li>
+        <li>SECOND PARAGRAPH *</li>
+        <li>FIRST ASSIGNATORY NAME *</li>
+        <li>FIRST ASSIGNATORY POSITION *</li>
+        <li>SECOND ASSIGNATORY NAME</li>
+        <li>SECOND ASSIGNATORY POSITION</li>
+        <li>THIRD ASSIGNATORY NAME</li>
+        <li>THIRD ASSIGNATORY POSITION</li>
+      </b>
+    </ul>
+    2. All items marked “*” are required that must be completed.<br>
+    3. The labels <b>must</b> be CAPITALIZE.
+    <h3> Upload logo </h3>
+    (note that it's' optional to upload logo.)<br><br>
+    <%= file_field_tag :logo, id: :owner_logo %>
+      
+    <br>
+    <h3>Import CSV file</h3>
+    1. Click Choose File.<br>
+    2. Locate your CSV file, then click Open.<br>
+    3. Click Upload file.<br><br>
+      <%= file_field_tag :file %>
+      <%= submit_tag "Upload" %>
+    </p>
+    <%= link_to 'Back', owners_path %>
+  </div>
+<% end %>
+  

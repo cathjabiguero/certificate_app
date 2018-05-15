@@ -10,9 +10,9 @@ class Owner < ApplicationRecord
             
   dragonfly_accessor :logo  
 
-  def self.import(file)
-    CSV.foreach(file.path, headers: true, header_converters: :symbol) do |row|
-      Owner.create! row.to_hash
+  def self.import(csv_file, logo)
+    CSV.foreach(csv_file.path, headers: true, header_converters: :symbol) do |row|
+      Owner.create! row.to_hash.merge(logo: logo)
     end
   end
 end
