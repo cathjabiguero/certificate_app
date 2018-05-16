@@ -3,16 +3,41 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 table#show {
-    height: 560px;
-    width: 792px;
-    padding: 0;
-    margin: 0;
-    border: 1px solid #000;
-    background-image: image-url('student_cert.jpg');
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: fixed;
+  margin: 0px auto;
+  height: 560px;
+  width: 792px;
+  padding-left: 40px;
+  border: 1px solid #000;
+  background-image: image-url('student_cert.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: fixed;
+}
+tr, td {
+  }
+td#title{
+  font-size:20px;
+  height: 115px;
+  vertical-align: bottom;
+}
+td#subtitle{
+  vertical-align: bottom; 
+}
+td#quipperlogo{
+  width:190px;
+}
+td#recipient_name{
+  font-size:40px;
+}
+td#first_paragraph{
+  padding-right: 60px;
+}
+td#second_paragraph{
+  vertical-align: bottom; 
+}
+tr#assignatory{
+  
 }
 h1,h3 {
-    font-style: italic;
+  font-style: italic;
 }
