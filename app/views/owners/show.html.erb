@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-<table id="show">
+<table id="showhtml">
   <tr> 
     <td colspan="2" id="title">
     <%= @owner.title %>
@@ -41,4 +41,7 @@
     </td>
   </tr>
 </table>
+<div>
+<%= link_to 'Create PDF', owner_path(@owner, :format=>:pdf) %>
 <%= link_to 'Back', owners_path %>
+</div>

@@ -10,6 +10,25 @@ class OwnersController < ApplicationController
   # GET /owners/1
   # GET /owners/1.json
   def show
+    respond_to do |format|
+      format.html
+      format.pdf do
+        render pdf:"certificate",
+        template:"owners/show.pdf.erb",
+        layout:'pdf.html'
+      end
+    end
+  end
+
+  def showpdf
+    respond_to do |format|
+      format.html
+      format.pdf do
+        render pdf:"certificate",
+        template:"owners/show.html.erb",
+        layout:'pdf.html'
+      end
+    end
   end
 
   # GET /owners/new
