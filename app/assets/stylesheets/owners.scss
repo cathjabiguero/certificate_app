@@ -20,63 +20,51 @@ div.lists th, footer{
   clear: left;
   text-align: center;
 }
-table#showhtml {
+#showhtml {
   table-layout: fixed;
   margin: 0px auto;
-  height: 560px;
-  width: 792px;
-  padding-left: 40px;
+  height: 721px;
+  width: 1019px;
+  padding-left: 55px;
   border: 1px solid #000;
-  background-image: image-url('student_cert.jpg');
-  background-size: 100%;
+  background-image: asset-data-url("teacher_cert.jpg"); // not working
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: fixed;
+  font-family: "Trebuchet MS";
 }
-
-table#showpdf {
-  table-layout: fixed;
-  margin: 0px auto;
-  height: 560px;
-  width: 792px;
-  padding-left: 40px;
-  border: 1px solid #000;
-  background-image: image-url('student_cert.jpg');
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: fixed;
-}
-
-td#title{
+#title{
   line-height: normal;
   word-break: keep-all;
-  font-size:40px;
-  padding-top: 0px auto;
+  font-size:50px;
+  padding-top:50px;
   padding-right:250px;
   height: 115px;
   vertical-align: bottom;
 }
-td#subtitle{
-  font-size:20px;
+#subtitle{
+  font-size:25px;
   vertical-align: bottom; 
 }
-td#quipperlogo{
-  width:190px;
+#logo{
+  width:250px;
 }
-td#recipient_name{
-  font-size:50px;
+#recipient_name{
+  line-height: normal;
+  word-break: keep-all;
+  font-size:60px;
   vertical-align: bottom;
 }
-td#first_paragraph{
+#first_paragraph{
   vertical-align: bottom;
-  font-size:20px;
-  padding-right: 90px;
+  font-size:23px;
+  padding-right: 100px;
 }
-td#second_paragraph{
-  font-size:20px;
+#second_paragraph{
+  vertical-align: top;
+  font-size:23px;
 }
-tr#assignatory{
+#assignatory{
   font-size:20px;
-}
-h1,h3 {
-  font-style: italic;
+  vertical-align: top;
 }

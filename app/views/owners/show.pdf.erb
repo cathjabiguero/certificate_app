@@ -2,35 +2,34 @@
 <p id="notice"><%= notice %></p>
 <table id="showpdf">
   <tr> 
-    <td colspan="2" id="title">
+    <td colspan="2" id="pdf_title">
     <%= @owner.title %>
     </td>
     
-    <td rowspan="6" id="quipperlogo">
-    
+    <td rowspan="6" id="pdf_logo">
     </td>
   </tr>
   <tr> 
-    <td colspan="2" id="subtitle">
+    <td colspan="2" id="pdf_sub">
       <%= @owner.subtitle %>
     </td>
   </tr>
   <tr>
-    <td colspan="2" id="recipient_name">
+    <td colspan="2" id="pdf_recipient_name">
       <%= @owner.recipient_name %>
     </td>
   </tr>
   <tr>
-    <td colspan="2" id="first_paragraph">
+    <td colspan="2" id="pdf_first_paragraph">
       <p><%= @owner.first_paragraph %></p>
     </td>
   </tr>
   <tr>
-    <td colspan="2" id="second_paragraph">
+    <td colspan="2" id="pdf_second_paragraph">
       <p><%= @owner.second_paragraph %></p>
     </td>
   </tr>
-  <tr id="assignatory">
+  <tr id="pdf_assignatory">
     <td>
       <p><%= @owner.first_assignatory_name %></p>
       <p><%= @owner.first_assignatory_position %></p>
@@ -42,5 +41,3 @@
     </td>
   </tr>
 </table>
-<div>
-</div>
