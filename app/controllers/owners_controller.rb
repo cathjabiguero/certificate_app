@@ -20,16 +20,16 @@ class OwnersController < ApplicationController
     end
   end
 
-  def showpdf
-    respond_to do |format|
-      format.html
-      format.pdf do
-        render pdf:"certificate",
-        template:"owners/show.html.erb",
-        layout:'pdf.html'
-      end
-    end
-  end
+  # def showpdf
+  #   respond_to do |format|
+  #     format.html
+  #     format.pdf do
+  #       render pdf:"certificate",
+  #       template:"owners/show.html.erb",
+  #       layout:'pdf.html'
+  #     end
+  #   end
+  # end
 
   # GET /owners/new
   def new
