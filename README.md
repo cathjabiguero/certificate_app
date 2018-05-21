@@ -4,7 +4,7 @@
 <h2>Getting Started</h2>
 <p></p>
 <hr>
-<h3>Requirements</h3></br>
+<h3>Requirements</h3>
 <p><ul>
   <li>Ruby (sample apps were written with Ruby 22.5.0p0)</li><br>
   <li>Rails 5.1.6</li><br>
@@ -24,6 +24,7 @@
       <li>pry - an IRB alternative and runtime developer console.</li>
       <li>wicked_pdf - serve a PDF file to a user from HTML.</li>
       <li>RSpec-rails 3.5 - a testing framework.</li>
+      <li>will_paginate - it is Pagination Library for Rails</li>
   </ul>
 </p>
 <h3>Running the app</h3>
@@ -32,5 +33,5 @@ To see your application in action, open a browser window and navigate to http://
 
 You should see a home page with a lists of owners of the certificates.<br>
 To stop the server, type Control-C.</p>
-<h3>Documentation</h3><hr>
+<h3>Documentation</h3>
 <p>The book 'Learn Ruby on Rails' provides additional documentation.</p>
