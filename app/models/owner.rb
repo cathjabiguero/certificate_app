@@ -8,6 +8,8 @@ class Owner < ApplicationRecord
             :first_assignatory_position, 
             presence: true #validation
             
+  default_scope { order("created_at DESC")} #descending order of records
+
   dragonfly_accessor :logo  
 
   def self.import(csv_file, logo)
@@ -16,5 +18,5 @@ class Owner < ApplicationRecord
     end
   end
 
-  self.per_page = 10
+  self.per_page = 5 
 end
