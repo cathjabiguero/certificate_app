@@ -20,18 +20,16 @@
 <p>Here are the gems used by the application:
 <br> Source: https://rubygems.org
   <ul>
-      <li>dragonfly 1.1.5 - generate image thumbnails in Rails</li>
-      <li>pry - an IRB alternative and runtime developer console.</li>
-      <li>wicked_pdf - serve a PDF file to a user from HTML.</li>
-      <li>RSpec-rails 3.5 - a testing framework.</li>
-      <li>will_paginate - it is Pagination Library for Rails</li>
+      <li>[dragonfly 1.1.5](https://github.com/markevans/dragonfly) - generate image thumbnails in Rails</li>
+      <li>[pry](https://github.com/pry/pry) - an IRB alternative and runtime developer console.</li>
+      <li>[wicked_pdf](https://github.com/mileszs/wicked_pdf) - serve a PDF file to a user from HTML.</li>
+      <li>[RSpec-rails](https://github.com/rspec/rspec-rails) 3.5 - a testing framework.</li>
+      <li>[will_paginate](https://github.com/mislav/will_paginate) - it is Pagination Library for Rails</li>
   </ul>
 </p>
 <h3>Running the app</h3>
-<p>$ rails server<br>
-To see your application in action, open a browser window and navigate to http://localhost:3000/.
+<p>`$ rails server`<br><br>
+To see your application in action, open a browser window and navigate to `http://localhost:3000/`.
 
 You should see a home page with a lists of owners of the certificates.<br>
-To stop the server, type Control-C.</p>
-<h3>Documentation</h3>
-<p>The book 'Learn Ruby on Rails' provides additional documentation.</p>
+To stop the server, type <br>`Control-C`.</p>
