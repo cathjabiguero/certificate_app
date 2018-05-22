@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     collection do
       post "import"
       get "import_instructions"
-      get "showpdf"
+      get "csv_preview"
     end
   end
 end
