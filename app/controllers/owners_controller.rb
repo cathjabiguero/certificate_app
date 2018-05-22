@@ -4,7 +4,15 @@ class OwnersController < ApplicationController
   # GET /owners
   # GET /owners.json
   def index
-    @owners = Owner.paginate(:page => params[:page], :per_page => 10)
+    @owners = Owner.all
+    respond_to do |format|
+      format.html
+      format.pdf do
+        @owners = render :pdf => 'certificate', 
+                         :layout => 'pdf.html', 
+                         :template => 'owners/show.html.erb'
+      end
+    end
   end
   # GET /owners/1
   # GET /owners/1.json
