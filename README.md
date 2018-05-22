@@ -2,7 +2,10 @@
 <hr>
 <p>A simple automated generation of <i>Certificates</i> designed for Students and Teachers.</p>
 <h2>Getting Started</h2>
-<p></p>
+<h3>How this project can be used?</h3>
+<p><ul>
+  <li>Generate certificates into PDF using a template and data from a csv file.</li>
+</ul></p>
 <hr>
 <h3>Requirements</h3>
 <p><ul>
@@ -32,4 +35,4 @@
 To see your application in action, open a browser window and navigate to `http://localhost:3000/`.
 
 You should see a home page with a lists of owners of the certificates.<br>
-To stop the server, type <br>`Control-C`.</p>
+To stop the server, type `Control-C`.</p>

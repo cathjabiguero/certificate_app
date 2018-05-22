@@ -6,30 +6,18 @@ class OwnersController < ApplicationController
   def index
     @owners = Owner.paginate(:page => params[:page], :per_page => 10)
   end
-
   # GET /owners/1
   # GET /owners/1.json
   def show
     respond_to do |format|
       format.html
       format.pdf do
-        render pdf:"certificate",
-        template:"owners/show.pdf.erb",
-        layout:'pdf.html'
+        @owners = render :pdf => 'certificate', 
+                         :layout => 'pdf.html', 
+                         :template => 'owners/show.html.erb'
       end
     end
   end
-
-  # def showpdf
-  #   respond_to do |format|
-  #     format.html
-  #     format.pdf do
-  #       render pdf:"certificate",
-  #       template:"owners/show.html.erb",
-  #       layout:'pdf.html'
-  #     end
-  #   end
-  # end
 
   # GET /owners/new
   def new
@@ -75,7 +63,7 @@ class OwnersController < ApplicationController
   def destroy
     @owner.destroy
     respond_to do |format|
-      format.html { redirect_to owners_url, notice: 'Owner was successfully destroyed.' }
+      format.html { redirect_to owners_url, notice: 'Owner was successfully deleted.' }
       format.json { head :no_content }
     end
   end
