@@ -17,6 +17,6 @@ class Owner < ApplicationRecord
       Owner.create! row.to_hash.merge(logo: logo)
     end
   end
-
+  
   self.per_page = 5 
 end

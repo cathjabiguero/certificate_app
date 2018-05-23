@@ -1,4 +1,6 @@
-
+div.alwaysbreak{
+  page-break-before: always;
+}
 #showpdf {
   table-layout: fixed;
   margin: 0px auto;
