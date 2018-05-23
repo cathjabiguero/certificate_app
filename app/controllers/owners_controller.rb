@@ -77,8 +77,13 @@ class OwnersController < ApplicationController
   end
 
   def import
-    Owner.import(params[:file], params[:logo])
-    redirect_to owners_path, notice: 'Import Added Successfully.'
+    Owner.delete_all if Owner.count > 0
+    if params[:file].blank?
+      redirect_to import_instructions_owners_path, notice: 'No CSV file uploaded'
+    else
+      Owner.import(params[:file], params[:logo])
+      redirect_to owners_path, notice: 'Import Added Successfully.'
+    end
   end
 
   def import_instructions

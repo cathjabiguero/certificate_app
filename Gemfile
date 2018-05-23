@@ -54,7 +54,6 @@ group :development do
   gem 'pry'
   gem 'wicked_pdf', '~> 1.1'
   gem 'wkhtmltopdf-binary'
-  gem 'will_paginate', '~>3.1.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
