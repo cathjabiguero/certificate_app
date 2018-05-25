@@ -1,16 +1,21 @@
 div.alwaysbreak{
   page-break-before: always;
+  position: center center;
+}
+td,tr{
+  border: 2px solid black;
 }
 #showpdf {
+  border: 2px solid black;
   table-layout: fixed;
   margin: 0px auto;
-  height: 721px;
-  width: 1019px;
+  height: 790px;
+  width: 1050px;
   padding-left: 55px;
-  background-image: asset-data-url("teacher_cert.jpg"); // not working
-  background-size: contain;
+  background-image: asset-data-url("teacher_cert.jpg"); 
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: fixed;
+  background-position: center center;
   font-family: "Trebuchet MS";
 }
 #pdf_title{

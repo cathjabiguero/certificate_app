@@ -27,7 +27,6 @@
       <li>[pry](https://github.com/pry/pry) - an IRB alternative and runtime developer console.</li>
       <li>[wicked_pdf](https://github.com/mileszs/wicked_pdf) - serve a PDF file to a user from HTML.</li>
       <li>[RSpec-rails](https://github.com/rspec/rspec-rails) 3.5 - a testing framework.</li>
-      <li>[will_paginate](https://github.com/mislav/will_paginate) - it is Pagination Library for Rails</li>
   </ul>
 </p>
 <h3>Running the app</h3>
