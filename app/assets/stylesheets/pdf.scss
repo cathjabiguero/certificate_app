@@ -1,21 +1,22 @@
 div.alwaysbreak{
   page-break-before: always;
   position: center center;
+  border: 1px solid red;
 }
 td,tr{
-  border: 2px solid black;
+  //border: 2px solid black;
 }
 #showpdf {
-  border: 2px solid black;
+  //border: 2px solid black;
   table-layout: fixed;
   margin: 0px auto;
-  height: 790px;
+  height: 742px;
   width: 1050px;
-  padding-left: 55px;
+  //padding-left: 55px;
   background-image: asset-data-url("teacher_cert.jpg"); 
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: right center;
   font-family: "Trebuchet MS";
 }
 #pdf_title{
@@ -31,7 +32,10 @@ td,tr{
   font-size:25px;
   vertical-align: bottom; 
 }
-#pdf_logo{
+.col_1 {
+  padding-left: 55px;
+}
+.col_3{
   width:250px;
 }
 #pdf_recipient_name{

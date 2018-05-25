@@ -23,6 +23,7 @@ class OwnersController < ApplicationController
         @owners = render :pdf => 'certificate', 
                          :layout => 'pdf.html', 
                          :template => 'owners/show.html.erb'
+
       end
     end
   end

@@ -18,7 +18,7 @@ WickedPdf.config = {
   # Layout file to be used for all PDFs
   # (but can be overridden in `render :pdf` calls)
   # layout: 'pdf.html',
-  page_size: 'Letter',
+  page_size: 'A4',
   orientation: 'Landscape',
   margin: { top: 0, bottom: 0, left: 0, right: 0 }
 }

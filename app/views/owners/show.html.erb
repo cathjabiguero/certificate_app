@@ -3,40 +3,40 @@
 <div class="alwaysbreak">
   <table id="showpdf">
     <tr> 
-      <td colspan="2" id="pdf_title">
-      <%= owner.title %>
+      <td colspan="2" id="pdf_title" class="col_1">
+        <%= owner.title %>
       </td>
       
-      <td rowspan="6" id="pdf_logo">
+      <td rowspan="6" class="col_3">
       </td>
     </tr>
     <tr> 
-      <td colspan="2" id="pdf_sub">
+      <td colspan="2" id="pdf_sub" class="col_1">
         <%= owner.subtitle %>
       </td>
     </tr>
     <tr>
-      <td colspan="2" id="pdf_recipient_name">
+      <td colspan="2" id="pdf_recipient_name" class="col_1">
         <%= owner.recipient_name %>
       </td>
     </tr>
     <tr>
-      <td colspan="2" id="pdf_first_paragraph">
+      <td colspan="2" id="pdf_first_paragraph" class="col_1">
         <p><%= owner.first_paragraph %></p>
       </td>
     </tr>
     <tr>
-      <td colspan="2" id="pdf_second_paragraph">
+      <td colspan="2" id="pdf_second_paragraph" class="col_1">
         <p><%= owner.second_paragraph %></p>
       </td>
     </tr>
-    <tr id="pdf_assignatory">
-      <td>
+    <tr>
+      <td id="pdf_assignatory" class="col_1">
         <p><%= owner.first_assignatory_name %></p>
         <p><%= owner.first_assignatory_position %></p>
       </td>
   
-      <td>
+      <td class="col_2">
         <p><%= owner.second_assignatory_name %></p>
         <p><%= owner.second_assignatory_position %></p>
       </td>
