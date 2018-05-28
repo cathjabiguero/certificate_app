@@ -1,46 +1,39 @@
 div.alwaysbreak{
   page-break-before: always;
-  position: center center;
-  border: 1px solid red;
-}
-td,tr{
-  //border: 2px solid black;
+  margin: 0px auto;
 }
 #showpdf {
-  //border: 2px solid black;
-  table-layout: fixed;
+  height: 842px;
+  width: 1191px;
   margin: 0px auto;
-  height: 742px;
-  width: 1050px;
-  //padding-left: 55px;
   background-image: asset-data-url("teacher_cert.jpg"); 
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: right center;
-  font-family: "Trebuchet MS";
+  background-position: center center;
 }
 #pdf_title{
   line-height: normal;
   word-break: keep-all;
-  font-size:50px;
-  padding-top:50px;
+  font-size:60px;
   padding-right:250px;
-  height: 115px;
+  height: 185px;
   vertical-align: bottom;
+  font-family: 'OpenSans-B';
 }
 #pdf_sub{
   font-size:25px;
   vertical-align: bottom; 
 }
 .col_1 {
-  padding-left: 55px;
+  padding-left: 70px;
 }
 .col_3{
-  width:250px;
+  width:350px;
 }
 #pdf_recipient_name{
-  font-size:50px;
+  font-size:70px;
   vertical-align: bottom;
+  font-family: 'OpenSans-ExtraBI';
 }
 #pdf_first_paragraph{
   vertical-align: bottom;
@@ -53,5 +46,4 @@ td,tr{
 }
 #pdf_assignatory{
   font-size:20px;
-  vertical-align: top;
 }

@@ -16,4 +16,3 @@ RSpec.describe Owner, type: :model do
     end
   end
 end
-

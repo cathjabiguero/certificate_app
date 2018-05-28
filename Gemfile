@@ -54,6 +54,9 @@ group :development do
   gem 'pry'
   gem 'wicked_pdf', '~> 1.1'
   gem 'wkhtmltopdf-binary'
+  gem 'roo-xls'
+  gem 'iconv'
+  gem 'axlsx_rails'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

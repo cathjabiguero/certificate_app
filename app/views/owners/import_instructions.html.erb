@@ -1,13 +1,13 @@
 <p id="notice"><%= notice %></p>
 <%= form_tag import_owners_path, multipart: true do %>
-  
+
   <h1>Import Instructions</h1>
-  <h2>support csv input for creating multiple records</h2><br>
+  <h2>A CSV or Excel file can be used to import records.</h2><br>
   <div>
     <h3>Before importing CSV file</h3>
     <p>
-    1. Your <u>LABELS</u> inside your CSV should be 
-    assembled in the following order:<br>
+    1. Your <u>first row</u> inside your CSV should be 
+    the column name. The following columns are allowed:<br>
     <ul>
       <b>
         <li>HEADER</li>
@@ -25,7 +25,7 @@
       </b>
     </ul>
     2. All items marked “*” are required that must be completed.<br>
-    3. The labels <b>must</b> be CAPITALIZE.
+    3. The column names <b>must</b> be CAPITALIZE.
     <h3> Upload logo </h3>
     (note that it's' optional to upload logo.)<br><br>
     <%= file_field_tag :logo, id: :owner_logo, :accept => '.png , .jpg'%>  
@@ -35,10 +35,9 @@
     1. Click Choose File.<br>
     2. Locate your CSV file, then click Open.<br>
     3. Click Upload file.<br><br>
-      <%= file_field_tag :file, :accept => 'text/csv' %>
-      <%= submit_tag "Upload" %>
+      <%= file_field_tag :file, :accept => '.csv, .xls, .xlsx' %>
+      <%= submit_tag "Import" %>
     </p>
     <%= link_to 'Back', owners_path %>
   </div>
 <% end %>
-  

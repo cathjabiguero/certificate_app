@@ -36,13 +36,18 @@
           <td><%= owner.second_assignatory_name %></td>
           <td><%= owner.second_assignatory_position %></td>
           <td><%= image_tag owner.logo.thumb('100x100#').url if owner.logo_stored?%></td>
-          <td><%= link_to 'Edit', edit_owner_path(owner) %>
+          <td><%= link_to 'Export as PDF', owner_path(owner, :format => :pdf)  %>
+          <br><%= link_to 'Edit', edit_owner_path(owner) %>
           <br><%= link_to 'Delete', owner, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
     </tbody>
   </table>
-  <%= link_to 'Show PDF', owners_index_path(@owners, :format => :pdf)%>
-  <footer></footer>
+  <footer><p><%= link_to 'Export ALL as PDF', owners_index_path(@owners, :format => :pdf)%><br>
+              Download:
+             <%= link_to "CSV", owners_index_path(@owners, :format => :csv) %>|
+             <%= link_to "Excel", owners_index_path(@owners, :format => :xlsx) %>
+         </p>
+  </footer>
   </div>
 </div>

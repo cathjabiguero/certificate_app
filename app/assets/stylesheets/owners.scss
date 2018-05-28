@@ -5,7 +5,6 @@ div.lists{
   width: 100%;
   border: 1px solid gray;
   margin: 0px auto;
-  font-family: "Trebuchet MS";
 }
 div.lists tr:hover {
   background-color: #effeff;
@@ -19,51 +18,4 @@ div.lists th, footer{
   background-color: #0cb1d6;
   clear: left;
   text-align: center;
-}
-#showhtml {
-  table-layout: fixed;
-  margin: 0px auto;
-  height: 721px;
-  width: 1019px;
-  padding-left: 55px;
-  background-image: asset-data-url("teacher_cert.jpg"); // not working
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: fixed;
-  font-family: "Trebuchet MS";
-}
-#title{
-  line-height: normal;
-  word-break: keep-all;
-  font-size:50px;
-  padding-top:50px;
-  padding-right:250px;
-  height: 115px;
-  vertical-align: bottom;
-}
-#subtitle{
-  font-size:25px;
-  vertical-align: bottom; 
-}
-#logo{
-  width:250px;
-}
-#recipient_name{
-  line-height: normal;
-  word-break: keep-all;
-  font-size:60px;
-  vertical-align: bottom;
-}
-#first_paragraph{
-  vertical-align: bottom;
-  font-size:23px;
-  padding-right: 100px;
-}
-#second_paragraph{
-  vertical-align: top;
-  font-size:23px;
-}
-#assignatory{
-  font-size:20px;
-  vertical-align: top;
 }

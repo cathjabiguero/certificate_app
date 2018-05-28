@@ -1,46 +1,48 @@
-<% @owners.each do |owner| %>
-  <p id="notice"><%= notice %></p>
 <div class="alwaysbreak">
   <table id="showpdf">
     <tr> 
       <td colspan="2" id="pdf_title" class="col_1">
-        <%= owner.title %>
+        <%= @owner.title %>
       </td>
-      
+
       <td rowspan="6" class="col_3">
       </td>
     </tr>
+
     <tr> 
       <td colspan="2" id="pdf_sub" class="col_1">
-        <%= owner.subtitle %>
+        <%= @owner.subtitle %>
       </td>
     </tr>
+
     <tr>
       <td colspan="2" id="pdf_recipient_name" class="col_1">
-        <%= owner.recipient_name %>
+        <%= @owner.recipient_name %>
       </td>
     </tr>
+
     <tr>
       <td colspan="2" id="pdf_first_paragraph" class="col_1">
-        <p><%= owner.first_paragraph %></p>
+        <p><%= @owner.first_paragraph %></p>
       </td>
     </tr>
+
     <tr>
       <td colspan="2" id="pdf_second_paragraph" class="col_1">
-        <p><%= owner.second_paragraph %></p>
+        <p><%= @owner.second_paragraph %></p>
       </td>
     </tr>
+
     <tr>
       <td id="pdf_assignatory" class="col_1">
-        <p><%= owner.first_assignatory_name %></p>
-        <p><%= owner.first_assignatory_position %></p>
+        <p><%= @owner.first_assignatory_name %></p>
+        <p><%= @owner.first_assignatory_position %></p>
       </td>
   
       <td class="col_2">
-        <p><%= owner.second_assignatory_name %></p>
-        <p><%= owner.second_assignatory_position %></p>
+        <p><%= @owner.second_assignatory_name %></p>
+        <p><%= @owner.second_assignatory_position %></p>
       </td>
     </tr>
   </table>
 </div>
-<% end %>  
