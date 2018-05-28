@@ -37,4 +37,8 @@ class Owner < ApplicationRecord
       end
     end
   end
+
+  def self.search(search)
+    where("recipient_name LIKE ?", "%#{search}%" )
+  end
 end

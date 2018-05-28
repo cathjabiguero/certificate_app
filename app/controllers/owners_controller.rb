@@ -5,6 +5,11 @@ class OwnersController < ApplicationController
   # GET /owners.json
   def index
     @owners = Owner.all
+    if params[:search]
+      @owners = Owner.search(params[:search]).order("created_at DESC")
+    else
+      @owners = Owner.all.order("created_at DESC")
+    end
     respond_to do |format|
       format.html
       format.csv {send_data @owners.to_csv}

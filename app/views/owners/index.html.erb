@@ -4,6 +4,11 @@
 <%= link_to 'For Individuals', new_owner_path %> <br>
 <%= link_to 'For Multiple Records', import_instructions_owners_path %> <br><br>
 
+<%= form_tag(owners_index_path, method: :get, id:'search-form') do %>
+  <%= text_field_tag :search, params[:search], placeholder:"Search Recipient Name" %>
+  <%= submit_tag 'Search', :name => nil %>
+<% end %>
+
 <div class="lists">
   <div class="media-body">
   <table>
