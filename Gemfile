@@ -57,6 +57,7 @@ group :development do
   gem 'roo-xls'
   gem 'iconv'
   gem 'axlsx_rails'
+  gem 'zip-zip'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

@@ -10,8 +10,8 @@ class Owner < ApplicationRecord
             
   default_scope { order("created_at DESC")} #descending order of records
 
-  dragonfly_accessor :logo  
-
+  dragonfly_accessor :logo
+  
   def self.import(file, logo)
     spreadsheet = open_spreadsheet(file)
     header = spreadsheet.row(1)
@@ -29,7 +29,7 @@ class Owner < ApplicationRecord
     end
   end
 
-  def self.to_csv(options={})
+  def self.to_csv(options={}) #export csv and excel
     CSV.generate(options) do |csv|
       csv << ["TITLE","SUBTITLE","RECIPIENT NAME","FIRST PARAGRAPH","SECOND PARAGRAPH","FIRST ASSIGNATORY NAME","FIRST ASSIGNATORY POSITION"]
       all.each do |owner|

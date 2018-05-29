@@ -4,7 +4,7 @@ class OwnersController < ApplicationController
   # GET /owners
   # GET /owners.json
   def index
-    @owners = Owner.all
+    @owners = Owner.all  
     if params[:search]
       @owners = Owner.search(params[:search]).order("created_at DESC")
     else
@@ -24,7 +24,6 @@ class OwnersController < ApplicationController
   # GET /owners/1
   # GET /owners/1.json
   def show
-    @owners = Owner.all
     respond_to do |format|
       format.html
       format.pdf do
