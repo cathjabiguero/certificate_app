@@ -23,6 +23,7 @@
         <th>Position</th>
         <th>Second Assignatory Name</th>
         <th>Position</th>
+        <th>QR code</th>
         <th>Logo</th>
         <th></th>
     </thead>
@@ -40,6 +41,11 @@
           <td><%= owner.first_assignatory_position %></td>
           <td><%= owner.second_assignatory_name %></td>
           <td><%= owner.second_assignatory_position %></td>
+          <td>
+            <% qr_code_img = RQRCode::QRCode.new(owner.recipient_name, :size => 20, :level => :h).to_img %>
+            <% owner.update_attribute :qr_code, qr_code_img.to_string %>
+            <%= image_tag owner.qr_code.url %>
+          </td>
           <td><%= image_tag owner.logo.thumb('100x100#').url if owner.logo_stored?%></td>
           <td><%= link_to 'Export as PDF', owner_path(owner, :format => :pdf)  %>
           <br><%= link_to 'Edit', edit_owner_path(owner) %>

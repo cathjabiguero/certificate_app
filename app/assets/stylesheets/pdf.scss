@@ -1,3 +1,9 @@
+
+@font-face{
+  font-family: "OpenSans-Bold";
+  src: font-url('OpenSans-Bold.ttf');
+}
+
 div.alwaysbreak{
   page-break-before: always;
   margin: 0px auto;
@@ -11,7 +17,7 @@ div.alwaysbreak{
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  font-family: 'Trebuchet MS';
+  font-family: 'Open Sans';
 }
 #pdf_title{
   line-height: normal;
@@ -46,9 +52,4 @@ div.alwaysbreak{
 }
 #pdf_assignatory{
   font-size:20px;
-}
-
-@font-face{
-  font-family: "OpenSans-Bold";
-  src: font-url('OpenSans-Bold.ttf');
 }

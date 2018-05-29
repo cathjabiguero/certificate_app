@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get "owners/index"
   root "owners#index"
+  
   resources :owners do
     collection do
       post "import"

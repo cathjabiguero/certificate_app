@@ -58,6 +58,7 @@ group :development do
   gem 'iconv'
   gem 'axlsx_rails'
   gem 'zip-zip'
+  gem 'rqrcode_png'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

@@ -11,6 +11,7 @@ class Owner < ApplicationRecord
   default_scope { order("created_at DESC")} #descending order of records
 
   dragonfly_accessor :logo
+  dragonfly_accessor :qr_code
   
   def self.import(file, logo)
     spreadsheet = open_spreadsheet(file)
