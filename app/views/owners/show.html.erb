@@ -3,7 +3,7 @@
   <table id="showpdf">
     <tr> 
       <td colspan="2" id="pdf_title" class="col_1">
-        <%= @owner.title %>
+        <%= @owner.title.upcase %>
       </td>
 
       <td rowspan="6" class="col_3">
@@ -12,7 +12,7 @@
 
     <tr> 
       <td colspan="2" id="pdf_sub" class="col_1">
-        <%= @owner.subtitle %>
+        <%= @owner.subtitle.upcase %>
       </td>
     </tr>
 
@@ -41,8 +41,7 @@
       </td>
   
       <td class="col_2">
-        <p><%= @owner.second_assignatory_name %></p>
-        <p><%= @owner.second_assignatory_position %></p>
+        <p><%= wicked_pdf_image_tag ("@owner.qr_code_img.url") %></p>
       </td>
     </tr>
   </table>

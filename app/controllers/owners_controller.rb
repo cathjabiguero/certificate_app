@@ -5,7 +5,7 @@ class OwnersController < ApplicationController
   # GET /owners.json
   def index
     @owners = Owner.all  
-    if params[:search]
+    if params[:search]#for search bar
       @owners = Owner.search(params[:search]).order("created_at DESC")
     else
       @owners = Owner.all.order("created_at DESC")

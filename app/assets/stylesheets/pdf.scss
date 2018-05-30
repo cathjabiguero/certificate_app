@@ -1,7 +1,8 @@
 
 @font-face{
-  font-family: "OpenSans-Bold";
-  src: font-url('OpenSans-Bold.ttf');
+  font-family: "OpenSans";
+  src: asset-url('fonts/OpenSans-Light.ttf');
+  font-weight:100;
 }
 
 div.alwaysbreak{
@@ -17,39 +18,50 @@ div.alwaysbreak{
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  font-family: 'Open Sans';
+  letter-spacing: -1;
+  font-family: "OpenSans";
+  color: #213b5e;
 }
 #pdf_title{
-  line-height: normal;
+  line-height: .8;
   word-break: keep-all;
-  font-size:60px;
+  font-size:50px;
+  padding-top: 20px;
   padding-right:250px;
-  height: 185px;
-  vertical-align: bottom;
+  height: 165px;
+  font-weight: bold;
 }
 #pdf_sub{
   font-size:25px;
   vertical-align: bottom; 
-}
-.col_1 {
-  padding-left: 70px;
-}
-.col_3{
-  width:350px;
+  font-weight: lighter;
 }
 #pdf_recipient_name{
-  font-size:60px;
-  vertical-align: bottom;
+  font-size: 70px;
+  height: 150px;
+  font-weight: bold;
+  font-style: italic;
 }
 #pdf_first_paragraph{
+  height:120px;
   vertical-align: bottom;
-  font-size:20px;
-  padding-right: 100px;
+  font-size:22px;
+  padding-right: 120px;
 }
 #pdf_second_paragraph{
+  height:120px;
   vertical-align: top;
   font-size:20px;
+  font-weight:bold;
 }
 #pdf_assignatory{
   font-size:20px;
+  font-weight:bold;
+  line-height:.5;
+}
+.col_1 {
+  padding-left: 60px;
+}
+.col_3{
+  width:350px;
 }

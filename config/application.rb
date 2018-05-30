@@ -17,5 +17,6 @@ module CertificateApp
 
     config.assets.enabled = true
     config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
+    config.assets.precompile << /\.(?:svg|eot|wodd|ttf)$/
   end
 end
