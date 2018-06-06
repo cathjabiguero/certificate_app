@@ -15,25 +15,40 @@ class OwnersController < ApplicationController
       format.csv {send_data @owners.to_csv}
       format.xlsx {send_data @owners.to_csv(col_sep: "\t")}
       format.pdf do
-        @owners = render :pdf => 'certificate', 
-                         :layout => 'pdf.html', 
-                         :template => 'owners/show.pdf.erb'
+        if @data.nil?
+          @owners = render :pdf => 'certificate', 
+                          :layout => 'student_pdf.html', 
+                          :template => 'owners/show.pdf.erb'
+        else
+          @owners = render :pdf => 'certificate', 
+                          :layout => 'teacher_pdf.html', 
+                          :template => 'owners/show.pdf.erb'
+        end
       end
     end
   end
+
   # GET /owners/1
   # GET /owners/1.json
   def show
     respond_to do |format|
       format.html
       format.pdf do
-        @owners = render :pdf => 'certificate', 
-                         :layout => 'pdf.html', 
-                         :template => 'owners/show.html.erb'
+        if @data.nil?
+          @owners = render :pdf => 'certificate', 
+                          :layout => 'student_pdf.html', 
+                          :template => 'owners/show.html.erb'
+        else
+          @owners = render :pdf => 'certificate', 
+                          :layout => 'teacher_pdf.html', 
+                          :template => 'owners/show.html.erb'
+        end
       end
     end
   end
-
+def template
+  @data = params[:cert_temp]
+end
   # GET /owners/new
   def new
     @owner = Owner.new
@@ -50,11 +65,11 @@ class OwnersController < ApplicationController
     Owner.delete_all if Owner.count > 0
     respond_to do |format|
       if @owner.save
-        format.html { redirect_to owners_index_path, notice: 'Owner was successfully created.' }
+        format.html { redirect_to owners_path, notice: 'Owner was successfully created.' }
         format.json { render :show, status: :created, location: @owner }
       else
         format.html { render :new }
-        format.json { render json: owners_index_path.errors, status: :unprocessable_entity }
+        format.json { render json: owners_path.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -64,11 +79,11 @@ class OwnersController < ApplicationController
   def update
     respond_to do |format|
       if @owner.update(owner_params)
-        format.html { redirect_to owners_index_path, notice: 'Owner was successfully updated.' }
+        format.html { redirect_to owners_path, notice: 'Owner was successfully updated.' }
         format.json { render :show, status: :ok, location: @owner }
       else
         format.html { render :edit }
-        format.json { render json: owners_index_path.errors, status: :unprocessable_entity }
+        format.json { render json: owners_path.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -107,6 +122,6 @@ class OwnersController < ApplicationController
     def owner_params
       params.require(:owner).permit(:header, :title, :subtitle, :recipient_name, :first_paragraph,
        :second_paragraph, :first_assignatory_name , :first_assignatory_position, 
-       :second_assignatory_name, :second_assignatory_position, :logo)
+       :second_assignatory_name, :second_assignatory_position, :logo, :cert_temp)
     end
 end

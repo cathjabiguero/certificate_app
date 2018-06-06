@@ -1,17 +1,14 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Automate Certificate Creation</h1>
-<%= link_to 'For Individuals', new_owner_path %> <br>
-<%= link_to 'For Multiple Records', import_instructions_owners_path %> <br><br>
-
-<%= form_tag(owners_index_path, method: :get, id:'search-form') do %>
+<%= link_to 'Create New', template_owners_path %>
+<%= form_tag(owners_path, method: :get, id:'search-form') do %>
   <%= text_field_tag :search, params[:search], placeholder:"Search Recipient Name" %>
   <%= submit_tag 'Search', :name => nil %>
 <% end %>
 
 <div class="lists">
-  <div class="media-body">
-  <table>
+  <table id ="infos">
     <thead>
         <th>Header</th>
         <th>Title</th>
@@ -20,8 +17,6 @@
         <th>First Paragraph</th>
         <th>Second Paragraph</th>
         <th>First Assignatory Name</th>
-        <th>Position</th>
-        <th>Second Assignatory Name</th>
         <th>Position</th>
         <th>QR code</th>
         <th>Logo</th>
@@ -39,8 +34,6 @@
           <td><%= owner.second_paragraph %></td>
           <td><%= owner.first_assignatory_name %></td>
           <td><%= owner.first_assignatory_position %></td>
-          <td><%= owner.second_assignatory_name %></td>
-          <td><%= owner.second_assignatory_position %></td>
           <td>
             <% qr_code_img = RQRCode::QRCode.new(owner.recipient_name, :size => 20, :level => :h).to_img %>
             <% owner.update_attribute :qr_code, qr_code_img.to_string %>
@@ -54,11 +47,10 @@
       <% end %>
     </tbody>
   </table>
-  <footer><p><%= link_to 'Export ALL as PDF', owners_index_path(@owners, :format => :pdf)%><br>
+  <footer><p><%= link_to 'Export ALL as PDF', owners_path(@owners, :format => :pdf)%><br>
               Download:
-             <%= link_to "CSV", owners_index_path(@owners, :format => :csv) %>|
-             <%= link_to "Excel", owners_index_path(@owners, :format => :xlsx) %>
+             <%= link_to "CSV", owners_path(@owners, :format => :csv) %>|
+             <%= link_to "Excel", owners_path(@owners, :format => :xlsx) %>
          </p>
   </footer>
-  </div>
 </div>

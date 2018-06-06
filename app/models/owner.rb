@@ -5,10 +5,10 @@ class Owner < ApplicationRecord
             :first_paragraph, 
             :second_paragraph, 
             :first_assignatory_name, 
-            :first_assignatory_position, 
+            :first_assignatory_position,
             presence: true #validation
             
-  default_scope { order("created_at DESC")} #descending order of records
+   default_scope { order("created_at DESC")} #descending order of records
 
   dragonfly_accessor :logo
   dragonfly_accessor :qr_code

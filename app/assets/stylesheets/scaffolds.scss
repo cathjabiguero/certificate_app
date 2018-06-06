@@ -1,15 +1,22 @@
+@font-face{
+  font-family: "Catamaran";
+  src: asset-url('fonts/Catamaran-Regular.ttf');
+}
+@font-face{
+  font-family: "Nobile";
+  src: asset-url('fonts/Nobile-bold.ttf');
+}
 body {
-  background-color: #fff;
   color: #333;
   margin: 33px;
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
+  font-family: 'Nobile';
+  font-size: 20px;
   line-height: 18px;
 }
 
 p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
+  font-family: 'Catamaran';
+  font-size: 20px;
   line-height: 18px;
 }
 
@@ -81,4 +88,11 @@ div {
 
 label {
   display: block;
+}
+h1{
+  text-align: center;
+	padding-bottom: 10px;
+	border-bottom: 2px solid #0cb1d6;
+	max-width: 100%;
+	margin: 20px auto;
 }
