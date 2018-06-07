@@ -66,4 +66,14 @@ div.alwaysbreak{
 }
 .col_3{
   width:350px;
+  margin: auto;
+  text-align: center;
+
+  img {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 150px;
+    left: 20px;
+  }
 }
