@@ -1,5 +1,5 @@
-<%= @owners.each do |owner| %>
 <div class="alwaysbreak">
+<% @owners.each do |owner| %>
   <table id="showpdf">
     <tr> 
       <td colspan="2" id="pdf_title" class="col_1">
@@ -41,10 +41,9 @@
       </td>
   
       <td class="col_2">
-        <p><%= owner.second_assignatory_name %></p>
-        <p><%= owner.second_assignatory_position %></p>
+      <p><%= wicked_pdf_image_tag("biebs.png") %></p>
       </td>
     </tr>
   </table>
-</div>
 <% end %>
+</div>

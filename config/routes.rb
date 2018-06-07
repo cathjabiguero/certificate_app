@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root "owners#template"
+  root "owners#mode"
   
   resources :owners do
     collection do

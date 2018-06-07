@@ -12,6 +12,7 @@
 
 div.lists{
   width: 100%;
+  height: 50vh;
   border: 1px solid gray;
   margin: 0px auto;
 }
@@ -21,25 +22,32 @@ div.lists tr:hover {
 div.lists tr:nth-child(even)  {
   background-color: #f2f9f9;
 }
-div.lists th, footer{
+div.lists th, tfoot{
   padding: 1em;
   color: white;
   background-color: #0cb1d6;
-  clear: left;
   text-align: center;
+}
+
+tfoot tr:hover {
+  background-color: #0cb1d6!important;
+}
+
+.infos{
+  text-align: center;
+  width: 100%;
+  height: 50vh;
+  border: 1px solid gray;
+  margin: 0px auto;
 }
 form {
   max-width: 500px;
   margin: 20px auto;
-  > div {
-    margin: 0 0 20px 0;
+  
     label {
       font-weight: bold;
     }
-    > div {
-      padding: 5px;
-    }
-  }
+   
 }
     
 label {
@@ -75,7 +83,7 @@ textarea {
 
 /* CONTAINERS */
 .container {max-width: 1050px; width: 100%; margin: 0 auto;}
-.four { width: 100%; max-width: 225px; }
+.four { width: 100%; max-width: 1050px; }
 
 /* COLUMNS */
 .col {
@@ -95,7 +103,7 @@ textarea {
 	background-color: #aaa;
 	font-size: 26px;
 	text-align: center;
-	height: 150px;
+	height: 250px;
 	line-height: 150px;
 	display: block;
 	cursor: pointer;

@@ -3,7 +3,6 @@
 
   <h1>Import Instructions</h1>
   <h2>A CSV or Excel file can be used to import records.</h2><br>
-  <div>
     <h3>Before importing CSV file</h3>
     <p>
     1. Your <u>first row</u> inside your CSV should be 
@@ -39,6 +38,6 @@
       <%= submit_tag "Import", data: { confirm: 'Are you sure you want to IMPORT NEW RECORDS?
                                                 Note: Old records will be permanently deleted, if you wish to import new records.' } %>
     </p>
-    <%= link_to 'Back', template_owners_path %>
+    <%= link_to 'Back', root_path %>
   </div>
 <% end %>

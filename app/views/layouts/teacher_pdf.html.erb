@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PDF</title>
+      <%= wicked_pdf_stylesheet_link_tag "teacher_pdf" %>
+      <%= wicked_pdf_javascript_include_tag "owners" %>
+      <meta http-equiv="content-type" content="text/html/url; charset=utf-8" /> 
+
+      <%= wicked_pdf_image_tag_for_public( @qrcode ) %>
+  </head>
+  
+  <body>
+    <%= yield %>
+  </body>
+</html>

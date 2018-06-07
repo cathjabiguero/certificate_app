@@ -31,6 +31,7 @@ class OwnersController < ApplicationController
   # GET /owners/1
   # GET /owners/1.json
   def show
+    @qrcode = qrcode_output(@owner)
     respond_to do |format|
       format.html
       format.pdf do
@@ -46,6 +47,12 @@ class OwnersController < ApplicationController
       end
     end
   end
+
+def qrcode_output(owner)
+  qrcode_string = owner.recipient_name
+  qrcode = RQRCode::QRCode.new(qrcode_string, :size => 20, :level => :h).to_img
+  qr_code = qrcode.to_data_url
+end  
 def template
   @data = params[:cert_temp]
 end
@@ -65,7 +72,7 @@ end
     Owner.delete_all if Owner.count > 0
     respond_to do |format|
       if @owner.save
-        format.html { redirect_to owners_path, notice: 'Owner was successfully created.' }
+        format.html { redirect_to template_owners_path, notice: 'Owner was successfully created.' }
         format.json { render :show, status: :created, location: @owner }
       else
         format.html { render :new }
@@ -122,6 +129,6 @@ end
     def owner_params
       params.require(:owner).permit(:header, :title, :subtitle, :recipient_name, :first_paragraph,
        :second_paragraph, :first_assignatory_name , :first_assignatory_position, 
-       :second_assignatory_name, :second_assignatory_position, :logo, :cert_temp)
+       :second_assignatory_name, :second_assignatory_position, :logo)
     end
 end
