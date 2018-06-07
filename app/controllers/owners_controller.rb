@@ -64,8 +64,18 @@ end
   # POST /owners.json
   def create
     @owner = Owner.new(owner_params)
-    qr_code_img = RQRCode::QRCode.new(@owner.recipient_name, :size => 20, :level => :l).to_img
-    @owner.qr_code = qr_code_img.to_string
+    qrcode = RQRCode::QRCode.new(@owner.recipient_name, :size => 4)
+    png = qrcode.as_png(
+          resize_gte_to: false,
+          resize_exactly_to: false,
+          fill: 'white',
+          color: 'black',
+          border_modules: 4,
+          module_px_size: 6,
+          file: nil # path to write
+          )
+    @owner.qr_code = png.to_string
+
     Owner.delete_all if Owner.count > 0
     respond_to do |format|
       if @owner.save
