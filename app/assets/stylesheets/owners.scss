@@ -41,7 +41,7 @@ tfoot tr:hover {
   margin: 0px auto;
 }
 form {
-  max-width: 500px;
+  max-width: 900px;
   margin: 20px auto;
   
     label {
@@ -82,14 +82,14 @@ textarea {
 //for template
 
 /* CONTAINERS */
-.container {max-width: 1050px; width: 100%; margin: 0 auto;}
-.four { width: 100%; max-width: 1050px; }
+.container {max-width: 850px; width: 100%; margin: 0 auto;}
+.four { width: 100%; max-width: 800px; }
 
 /* COLUMNS */
 .col {
   display: block;
   float:left;
-  margin: 1% 0 1% 1.6%;
+  margin: 5% 0 1% 1.6%;
 }
 
 /* FORM */
@@ -101,10 +101,10 @@ textarea {
 	position: relative;
 	color: #fff;
 	background-color: #aaa;
-	font-size: 26px;
+	font-size: 60px;
 	text-align: center;
-	height: 250px;
-	line-height: 150px;
+  height: 220px;
+	line-height: 60px;
 	display: block;
 	cursor: pointer;
 	border: 3px solid transparent;

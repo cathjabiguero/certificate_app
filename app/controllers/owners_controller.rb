@@ -64,6 +64,8 @@ end
   # POST /owners.json
   def create
     @owner = Owner.new(owner_params)
+    qr_code_img = RQRCode::QRCode.new(@owner.recipient_name, :size => 20, :level => :l).to_img
+    @owner.qr_code = qr_code_img.to_string
     Owner.delete_all if Owner.count > 0
     respond_to do |format|
       if @owner.save
@@ -106,7 +108,7 @@ end
       redirect_to import_instructions_owners_path, notice: 'No CSV file uploaded'
     else
       Owner.import(params[:file], params[:logo])
-      redirect_to owners_path, notice: 'Import Added Successfully.'
+      redirect_to template_owners_path, notice: 'Import Added Successfully.'
     end
   end
 
@@ -126,10 +128,4 @@ end
        :second_paragraph, :first_assignatory_name , :first_assignatory_position, 
        :second_assignatory_name, :second_assignatory_position, :logo)
     end
-
-    def qrcode_output(owner)
-      qrcode_string = owner.recipient_name
-      qrcode = RQRCode::QRCode.new(qrcode_string, :size => 20, :level => :h).to_img
-      qr_code = qrcode.to_data_url
-    end  
 end

@@ -1,28 +1,15 @@
 <html>
-<body>
-  <form class="form cf">
+<body><br><br><br><br>
+  <form class="form cf" action="/owners">
     <section class="cert_temp cf">
-      <h3>Mode:</h3>
+      <h3>Choose Template:</h3>
       <input type="radio" name="cert_temp" id="student" value="student" checked>
-      <label class="student-label four col" for="student">Student</label>
+      <label class="student-label four col" for="student"><br>Student</label>
       
       <input type="radio" name="cert_temp" id="teacher" value="teacher" >
-      <label class="teacher-label four col" for="teacher">Teacher</label>
+      <label class="teacher-label four col" for="teacher"><br>Teacher</label>
     </section>
     <input class="submit" id="btnSubmit"type="submit" value="Submit">		
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function(){
-        $("#individual").click(function(){
-          document.location.href = '/owners/new';
-        });
-        $("#multiple").click(function(){
-          document.location.href = '/owners/import_instructions';
-        });
-
-      });
-    </script>
   </form>
   </body>
   </html>
