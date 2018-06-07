@@ -7,6 +7,9 @@
       </td>
 
       <td rowspan="6" class="col_3">
+        <% unless owner.nil? %>
+          <%= wicked_pdf_image_tag_for_public( owner.qr_code.b64_data ) %>
+        <% end %>
       </td>
     </tr>
 
@@ -41,7 +44,7 @@
       </td>
   
       <td class="col_2">
-      <p><%# wicked_pdf_image_tag_public(qrcode) %></p>
+      
       </td>
     </tr>
   </table>

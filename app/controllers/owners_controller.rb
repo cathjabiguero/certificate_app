@@ -31,7 +31,6 @@ class OwnersController < ApplicationController
   # GET /owners/1
   # GET /owners/1.json
   def show
-    @qrcode = qrcode_output(@owner)
     respond_to do |format|
       format.html
       format.pdf do
@@ -48,11 +47,7 @@ class OwnersController < ApplicationController
     end
   end
 
-def qrcode_output(owner)
-  qrcode_string = owner.recipient_name
-  qrcode = RQRCode::QRCode.new(qrcode_string, :size => 20, :level => :h).to_img
-  qr_code = qrcode.to_data_url
-end  
+
 def template
   @data = params[:cert_temp]
 end
@@ -131,4 +126,10 @@ end
        :second_paragraph, :first_assignatory_name , :first_assignatory_position, 
        :second_assignatory_name, :second_assignatory_position, :logo)
     end
+
+    def qrcode_output(owner)
+      qrcode_string = owner.recipient_name
+      qrcode = RQRCode::QRCode.new(qrcode_string, :size => 20, :level => :h).to_img
+      qr_code = qrcode.to_data_url
+    end  
 end

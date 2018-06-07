@@ -18,7 +18,12 @@ class Owner < ApplicationRecord
     header = spreadsheet.row(1)
     (2..spreadsheet.last_row).each do |i|
       row = Hash[[header, spreadsheet.row(i)].transpose]
-      Owner.create! row.to_hash.merge(logo: logo)
+      profile = Owner.new row.to_hash.merge(logo: logo)
+
+      #add qr code before saving
+      qr_code_img = RQRCode::QRCode.new(profile.recipient_name, :size => 20, :level => :h).to_img
+      profile.qr_code = qr_code_img.to_string
+      profile.save!
     end
   end
   def self.open_spreadsheet(file)
