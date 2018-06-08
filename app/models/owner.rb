@@ -21,10 +21,10 @@ class Owner < ApplicationRecord
       profile = Owner.new row.to_hash.merge(logo: logo)
 
       #add qr code before saving
-      qrcode = RQRCode::QRCode.new(profile.recipient_name, :size => 4)
+      qrcode = RQRCode::QRCode.new(profile.recipient_name)
       png = qrcode.as_png(
           resize_gte_to: false,
-          resize_exactly_to: false,
+          resize_exactly_to: 120,
           fill: 'white',
           color: 'black',
           border_modules: 4,
